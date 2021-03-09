@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" /> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="http://localhost:4000/team">
+<meta property="og:url" content="http://localhost:4000/team">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Pudhina Fresh">
+<title>Team | Pudhina Fresh</title>
+<meta property="og:title" content="Team | Pudhina Fresh">
+<meta name="description" content="People under this project">
+<meta property="og:description" content="People under this project">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="icon" type="image/jpeg" href="http://localhost:4000/favicon.png"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!--pudhina-fresh-jekyll-sun-chocolate-ruby-v-2021-02-22-->
+<div class="wrapper">
+<header class="header">
+<div class="navigation">
+<a href="http://localhost:4000" class="logo">ULP-ACE</a>
+<ul class="menu">
+<li class="menu__entry"><a href="http://localhost:4000">About</a>
+<li class="menu__entry"><a href="http://localhost:4000/resources">Resources</a>
+<li class="menu__entry"><a href="http://localhost:4000/applications">Applications</a>
+<li class="menu__entry"><a href="http://localhost:4000/team">Team</a>
+</ul>
+</div>
+</header>
+<h1 class="page-title">
+   <div class="page-title__text">Team</div>
+   <div class="page-title__subtitle"></div>
+</h1>
+<style>
+body{margin-top:20px;}
+.team-list img {
+  width: 50%;
+}
+.team-list .content {
+  width: 50%;
+}
+.team-list .content .follow {
+  position: absolute;
+  bottom: 24px;
+}
+.team-list:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.team, .team-list {
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+.team .content .title, .team-list .content .title {
+  font-size: 18px;
+}
+.team .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.team .member-position, .team .team-social {
+  position: absolute;
+  bottom: -35px;
+  right: 0;
+  left: 0;
+  margin: auto 10%;
+  z-index: 99;
+}
+.team .team-social {
+  bottom: 40px;
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+.team:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.team:hover .overlay {
+  opacity: 0.6;
+}
+.team:hover .team-social {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .team-list img,
+  .team-list .content {
+    width: 100%;
+    float: none !important;
+  }
+  .team-list img .follow,
+  .team-list .content .follow {
+    position: relative;
+    bottom: 0;
+  }
+}
+.social-icon.social li a {
+    color: #adb5bd;
+    border-color: #adb5bd;
+}
+.social-icon li a {
+    color: #35404e;
+    border: 1px solid #35404e;
+    display: inline-block;
+    height: 32px;
+    text-align: center;
+    font-size: 15px;
+    width: 32px;
+    line-height: 30px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+.rounded {
+    border-radius: 5px !important;
+}
+.para-desc {
+    max-width: 600px;
+}
+.text-muted {
+    color: #8492a6 !important;
+}
+.section-title .title {
+    letter-spacing: 0.5px;
+    font-size: 30px;
+}
+</style>	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+<div class="container bootdey">
+       <div class="row">
+           <div class="col-12 text-center">
+               <div class="section-title mb-4 pb-2">
+               </div>
+           </div><!--end col-->
+       </div><!--end row-->
+       <div class="row">
+           <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+               <div class="team text-center rounded p-3 py-4">
+                    <img src="assets/img/Hemanth.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                   <div class="content mt-3">
+                       <h4 class="title mb-0">Hemanth Sabbella</h4>
+                        <small class="text-muted">Research Assistant, NeuRonICS Lab, IISc</small>
+                       <ul class="list-unstyled mt-3 social-icon social mb-0">
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a>
+                           <li class="list-inline-item"><a href="https://www.linkedin.com/in/hemanthsabbella/" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a>
+                       </ul><!--end icon-->
+                   </div>
+               </div>
+           </div><!--end col-->
+           <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+               <div class="team text-center rounded p-3 py-4">
+                    <img src="assets/img/Vishnu.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                   <div class="content mt-3">
+                       <h4 class="title mb-0">Vishnu Gumme</h4>
+                        <small class="text-muted">Masters student, NeuRonICS Lab, IISc</small>
+                       <ul class="list-unstyled mt-3 social-icon social mb-0">
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a>
+                       </ul><!--end icon-->
+                   </div>
+               </div>
+           </div><!--end col-->
+           <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+               <div class="team text-center rounded p-3 py-4">
+                    <img src="assets/img/Jaswanth.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                   <div class="content mt-3">
+                       <h4 class="title mb-0">Jaswanth Kumar Reddy</h4>
+                        <small class="text-muted">Masters student, NeuRonICS Lab, IISc</small>
+                       <ul class="list-unstyled mt-3 social-icon social mb-0">
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a>
+                       </ul><!--end icon-->
+                   </div>
+               </div>
+           </div><!--end col-->
+           <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+               <div class="team text-center rounded p-3 py-4">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                   <div class="content mt-3">
+                       <h4 class="title mb-0">Abhishek Nair</h4>
+                        <small class="text-muted">Ph.D Student, NeuRonICS Lab, IISc</small>
+                       <ul class="list-unstyled mt-3 social-icon social mb-0">
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a>
+                       </ul><!--end icon-->
+                   </div>
+               </div>
+           </div><!--end col-->
+           <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+               <div class="team text-center rounded p-3 py-4">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                   <div class="content mt-3">
+                       <h4 class="title mb-0">Dr. Chetan Singh Thakur</h4>
+                        <small class="text-muted">Assistant Professor, DESE, IISc</small>
+                       <ul class="list-unstyled mt-3 social-icon social mb-0">
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a>
+                       </ul><!--end icon-->
+                   </div>
+               </div>
+           </div><!--end col-->
+           <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+               <div class="team text-center rounded p-3 py-4">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                   <div class="content mt-3">
+                       <h4 class="title mb-0">Dr. Anup Rajput</h4>
+                        <small class="text-muted">Director, SAAR Microsystems</small>
+                       <ul class="list-unstyled mt-3 social-icon social mb-0">
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a>
+                           <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a>
+                       </ul><!--end icon-->
+                   </div>
+               </div>
+           </div><!--end col-->
+       </div><!--end row-->
+   </div>
+<br>
+<br>
+</div>
