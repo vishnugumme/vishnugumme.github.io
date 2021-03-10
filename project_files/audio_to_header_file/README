@@ -1,0 +1,3 @@
+#replace main_file.c with existing file
+#uncomment header file in main_file.c for corresponding audio file
+#Refer result file
