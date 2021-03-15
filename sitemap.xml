@@ -8,7 +8,7 @@
     <url>
       <loc>http://localhost:4000/applications</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -25,7 +25,7 @@
     <url>
       <loc>http://localhost:4000/tags/docs</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -40,7 +40,7 @@
     <url>
       <loc>http://localhost:4000/feed.xml</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -55,7 +55,7 @@
     <url>
       <loc>http://localhost:4000/</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -70,7 +70,7 @@
     <url>
       <loc>http://localhost:4000/tags/jekyll</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -85,7 +85,7 @@
     <url>
       <loc>http://localhost:4000/tags/open-source</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -102,7 +102,7 @@
     <url>
       <loc>http://localhost:4000/posts</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -117,7 +117,7 @@
     <url>
       <loc>http://localhost:4000/projects</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -134,7 +134,7 @@
     <url>
       <loc>http://localhost:4000/resources</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -151,7 +151,7 @@
     <url>
       <loc>http://localhost:4000/robots.txt</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -168,7 +168,7 @@
     <url>
       <loc>http://localhost:4000/sitemap.xml</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -183,7 +183,7 @@
     <url>
       <loc>http://localhost:4000/tags/tag1</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -198,7 +198,7 @@
     <url>
       <loc>http://localhost:4000/tags/tag2</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -213,7 +213,7 @@
     <url>
       <loc>http://localhost:4000/tags/tag3</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -228,7 +228,7 @@
     <url>
       <loc>http://localhost:4000/tags/tag4</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -243,7 +243,7 @@
     <url>
       <loc>http://localhost:4000/tags/tag5</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -258,7 +258,7 @@
     <url>
       <loc>http://localhost:4000/team</loc>
       
-        <lastmod>2021-03-15T17:33:48+05:30</lastmod>
+        <lastmod>2021-03-15T17:45:37+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
