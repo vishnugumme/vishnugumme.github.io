@@ -33,28 +33,50 @@
 </ul>
 </div>
 </header>
-<h1 class="page-title">
-   <div class="page-title__text"></div>
-   <div class="page-title__subtitle"></div>
-</h1>
-<h2>Ultra-low Power Acoustic Classifier for Edge Devices</h2>
-<p><br />
-The project aims to design a deployable system at edge to detect and classify the audio signatures.</p>
-<h4>CAR-SVM<h4>
-<img src="assets/img/functional_diagram.png" class="" alt="" />
-<h4>Hardware Design<h4>
-<h4>System Block Diagram<h4>
-<img src="assets/img/System_diagram.png" class="" alt="" />
-<h4>DEMO<h4>
-<iframe width="860" height="515" src="https://www.youtube.com/embed/GNCNcdz-jDc" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-</h4></h4></h4></h4></h4></h4></h4></h4>
+<br>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+.column {
+  float: left;
+  width: 50%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<h2 style="text-align: left;"><u>Ultra-low Power Acoustic Classifier for Edge Devices</u></h2>
+<p>ULP-ACE aims to design a deployable system at edge to detect and classify the audio signatures with ultra-low, ultra-light accoutics classifier. We have used TI's CC1352 as a demonstration chip which has ARM Cortex M4F processor and supports TI-RTOS. The application consumes <a style="background-color: #FF9999 ">40KB of FLASH</a>, <a style="background-color: #FFFF99 "> 17KB of SRAM</a> and <a style="background-color: #99FF99">5mW of MEAN POWER</a> when is measured with Energy Trace (powered by TI) for Dingo detection on edge.</p>
+<div class="row">
+ <div class="column">
+<h4><u>CAR-SVM</u></h4>
+<img src="assets/img/functional_diagram.png" class="responsive" alt="" />
+<h4><u>Demo</u></h4>
+<video width="95%" height="400" controls="">
+  <source src="assets/img/dingo.mp4" type="video/mp4" />
+</video>
+<h4><u>Current work and future aspirations</u></h4>
+<ol>
+<li>Optimizations with respective memory and power to increase the sustainability.
+<li>Automated framework for training, testing and inferencing on edge.
+<li>Use sensor controller studio to create a wake-up system to avoid device to be on always and push power requirement further down and also, use ULP micrpphone sensor on the board
+<li>Increase the reliability and robustness of the device. 
+<li>A custom board with application specIfic hardware with communication stack, energy harvesting incoRporated in it.
+</ol>
+<h4><u>References</u></h4>
+<ol>
+<li>In-filter Computing For Designing Ultra-light Acoustic Pattern Recognizers <i>[paper under review]</i>
+</ol>
+ </div>
+ <div class="column">
+   <h4><u>System Block Diagram</u></h4>
+<img src="assets/img/System_diagram.png" class="responsive" alt="" />
+<p>The CAR-SVM algorithm is implemented on TI's CC1352 chip (<a href="https://www.ti.com/tool/LAUNCHXL-CC1352R1">LAUNCHXL-CC1352R1</a>) which has ARM Cortex M4F processor working at 48MHz. We have leveraged the TI-RTOS features in-order to have fine-control over the pooling of hardware resources, power and memory optimizations.</p>
+<p><a href="https://www.adafruit.com/product/3492">Adafruit PDM MEMS Microphone</a> is used to capture the audio signals and it is interfaced with PDM drivers (Thread 1) and programmed to work at 1MHz sampling rate, decimated to 8KHz to get the PCM samples of the respective audio, these PCM samples are fed into accoutics classifier running on a different thread (Thread 2) using TI-RTOS. Since we have a single ARM core, these two threads are switching between each other, to eloborate, microphone collects 32 samples at one go, the accoutics classifier processes these 32 samples and goes to IDLE state before next 32 samples arrive. This process goes on real-time and after 8k samples are binary decision is made.</p>
+ </div>
+</div>
 <br>
 <br>
 </div>

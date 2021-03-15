@@ -1,3 +1,0 @@
-#!/bin/bash
-
-gcc main_file.c CAR.c bm_ihc.c normalized.c SVM_inference.c -lm
