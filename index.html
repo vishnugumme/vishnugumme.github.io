@@ -37,6 +37,7 @@
 .column {
   float: left;
   width: 50%;
+  padding: 10px
 }
 /* Clear floats after the columns */
 .row:after {
@@ -46,22 +47,23 @@
 }
 </style>
 <h2 style="text-align: left;"><u>Ultra-low Power Acoustic Classifier for Edge Devices</u></h2>
-<p>ULP-ACE aims to design a deployable system at edge to detect and classify the audio signatures with ultra-low, ultra-light accoutics classifier. We have used TI's CC1352 as a demonstration chip which has ARM Cortex M4F processor and supports TI-RTOS. The application consumes <a style="background-color: #FF9999 ">40KB of FLASH</a>, <a style="background-color: #FFFF99 "> 17KB of SRAM</a> and <a style="background-color: #99FF99">5mW of MEAN POWER</a> when is measured with Energy Trace (powered by TI) for Dingo detection on edge.</p>
+<p>ULP-ACE aims to design a deployable system at edge to detect and classify the audio signatures with ultra-low, ultra-light accoutic classifier. We have used TI's CC1352 as a demonstration chip which has ARM Cortex M4F processor and supports TI-RTOS. The application consumes <a style="background-color: #FF9999 ">49KB of FLASH</a>, <a style="background-color: #FFFF99 "> 17KB of SRAM</a> and <a style="background-color: #99FF99">5.5mW of MEAN POWER</a> which is measured with Energy Trace (powered by TI) for Dingo detection on edge.</p>
 <div class="row">
  <div class="column">
 <h4><u>CAR-SVM</u></h4>
-<img src="/assets/img/functional_diagram.PNG" class="responsive" alt="" />
-<h4><u>Demo</u></h4>
-<video width="95%" height="400" controls="">
-  <source src="/assets/img/dingo.mp4" type="video/mp4" />
-</video>
+<p>Unlike a conventional acoustic pattern recognizer, where the feature extraction and classification are designed independantly, the proposed architecture integrates the convolution and non-linear filtering operations. The result of this integration is a template based SVM whose memory and computational footprint (training and inference) is light enough to be implemented on an microcontroller. The processing flow of the input audio data is as shown in the figure below:</p>
+<img src="/assets/img/functional_diagram.PNG" class="" alt="" />
+ <p>The CAR-IHC is the part of the Digital Neuromorphic Cochlea, performs certain amount of pre-processing of audio to extract salient features which will be used to train and test the SVM model. The audio samples passes through the CAR block which are band pass filters, output of these CAR filers are the frequency components present in correspondinf filter frequency band for every sample, This component pases thrugh IHC blocks and summed for Fs samples(1 second duration), this summed energy component will be normalized in the range of 0 to 1 and this computed normalized/kernel/template output vector of normalized block after processing for every 1 second duration will be passed next to train and test the model.
+  For different application, tunable parameters such as sampling frequency,low and high threshold of interested frquency band,number of cascaded filters and selection of range of these cascaded filters(channels) to train the model will be adjusted according to interested frequency bands of targeted classes. We use one-against-all (OAA) approach for the training.
+  The dataset used for the training, should be recorded through the microphone we are using to generalize the effects of microphone channel in the training.</p>
 <h4><u>Current work and future aspirations</u></h4>
 <ol>
 <li>Optimizations with respective memory and power to increase the sustainability.
+<li> Fixed point and with the use of CMSIS-NN, till now we did with floating point precision.
 <li>Automated framework for training, testing and inferencing on edge.
-<li>Use sensor controller studio to create a wake-up system to avoid device to be on always and push power requirement further down and also, use ULP micrpphone sensor on the board
+<li>Use sensor controller studio to create a wake-up system to avoid device to be on always and push power requirement further down and also, use ULP microphone sensor on the board
 <li>Increase the reliability and robustness of the device. 
-<li>A custom board with application specIfic hardware with communication stack, energy harvesting incoRporated in it.
+<li>A custom board with application specific hardware with communication stack, energy harvesting incorporated in it.
 </ol>
 <h4><u>References</u></h4>
 <ol>
@@ -70,9 +72,17 @@
  </div>
  <div class="column">
    <h4><u>System Block Diagram</u></h4>
-<img src="/assets/img/System_diagram.PNG" class="responsive" alt="" />
+<img src="/assets/img/System_diagram.PNG" class="" alt="" />
 <p>The CAR-SVM algorithm is implemented on TI's CC1352 chip (<a href="https://www.ti.com/tool/LAUNCHXL-CC1352R1">LAUNCHXL-CC1352R1</a>) which has ARM Cortex M4F processor working at 48MHz. We have leveraged the TI-RTOS features in-order to have fine-control over the pooling of hardware resources, power and memory optimizations.</p>
-<p><a href="https://www.adafruit.com/product/3492">Adafruit PDM MEMS Microphone</a> is used to capture the audio signals and it is interfaced with PDM drivers (Thread 1) and programmed to work at 1MHz sampling rate, decimated to 8KHz to get the PCM samples of the respective audio, these PCM samples are fed into accoutics classifier running on a different thread (Thread 2) using TI-RTOS. Since we have a single ARM core, these two threads are switching between each other, to eloborate, microphone collects 32 samples at one go, the accoutics classifier processes these 32 samples and goes to IDLE state before next 32 samples arrive. This process goes on real-time and after 8k samples are binary decision is made.</p>
+<p><a href="https://www.adafruit.com/product/3492">Adafruit PDM MEMS Microphone</a> is used to capture the audio signals and it is interfaced with PDM drivers (Thread 1) and programmed to work at 1MHz sampling rate, decimated to 8KHz to get the PCM samples of the respective audio, these PCM samples are fed into accoutics classifier running on a different thread (Thread 2) using TI-RTOS. Since we have a single ARM core, these two threads are switching between each other, to eloborate, microphone collects 32 samples at one go, the accoutics classifier processes these 32 samples and goes to IDLE state before next 32 samples arrive. This process goes on real-time and after 8k samples are processed, a binary decision is made.</p>
+<h4><u>Demo</u>: Dingo detection on edge</h4>
+<video width="95%" height="350" controls="">
+  <source src="/assets/img/dingo.mp4" type="video/mp4" />
+</video>
+<br />
+<a><i>*The red LED indicates the sound of Dingo has been detected*</i></a>
+<h5><u>Memory and power:</u></h5>
+<img src="/assets/img/memory_power_improvedv1.PNG" />
  </div>
 </div>
 <br>
